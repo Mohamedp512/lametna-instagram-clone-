@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "223012357996",
+    "project_id": "instagram-app-427b8",
+    "storage_bucket": "instagram-app-427b8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:223012357996:android:7f70f04792b95497bf1549",
+        "android_client_info": {
+          "package_name": "safwat.tec.instantgram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "223012357996-4dd5u2trh2v5ggb46oq1pseb0lchcpqv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "safwat.tec.instantgram",
+            "certificate_hash": "50052646443285b979b70fbf97f8b1d99c882006"
+          }
+        },
+        {
+          "client_id": "223012357996-ivm6kt695j730h03jp4obrdba9409e7k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmstfDZ9jP8-gfjpF34F_GtnApN-b1RMs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "223012357996-ivm6kt695j730h03jp4obrdba9409e7k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
