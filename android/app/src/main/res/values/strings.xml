@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="facebook_app_id">420012563484478</string>
+    <string name="fb_login_protocol_scheme">fb420012563484478</string>
+    <string name="facebook_client_token">e769832253f3a89dcf7591e1ae1e8f6b</string>
+    <string name="app_name">lametna </string>
+    
+</resources>
