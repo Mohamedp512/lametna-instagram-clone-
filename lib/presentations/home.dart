@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:instantgram/presentations/loading/loading_screen.dart';
 import 'package:instantgram/state/auth/backend/authenticator.dart';
 import 'dart:developer' as devtools;
 
@@ -21,9 +22,9 @@ class Home extends StatelessWidget {
           ),
         ),
         body: Consumer(
-          builder: (context, ref, child) {
+          builder: (_, ref, child) {
             return TextButton(
-              onPressed: ()async {
+              onPressed: () async {
                 await ref.read(authStateProvider.notifier).logout();
               },
               child: const Text('Logout'),
