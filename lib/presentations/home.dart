@@ -6,9 +6,7 @@ import 'dart:developer' as devtools;
 
 import 'package:instantgram/state/auth/providers/auth_state_provider.dart';
 
-extension Log on Object {
-  void log() => devtools.log(toString());
-}
+
 
 class Home extends StatelessWidget {
   const Home({super.key});

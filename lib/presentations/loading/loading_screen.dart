@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:instantgram/presentations/loading/loading_screen_contoller.dart';
 
@@ -12,6 +12,7 @@ class LoadingScreen {
   factory LoadingScreen.instance() => _shared;
 
   LoadingScreenController? controller;
+
   void show({
     required BuildContext context,
     String text = Strings.loading,
@@ -19,7 +20,7 @@ class LoadingScreen {
     if (controller?.update(text) ?? false) {
       return;
     } else {
-      showOverlay(
+      controller=showOverlay(
         context: context,
         text: text,
       );
@@ -28,6 +29,7 @@ class LoadingScreen {
 
   void hide() {
     controller?.close();
+    print('Workkkkk');
     controller = null;
   }
 

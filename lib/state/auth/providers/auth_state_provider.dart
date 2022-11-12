@@ -3,4 +3,4 @@ import 'package:instantgram/state/auth/models/auth_state.dart';
 import 'package:instantgram/state/auth/notifiers/auth_state_notifier.dart';
 
 final authStateProvider = StateNotifierProvider<AuthStateNotifier, AuthState>(
-    (_) => AuthStateNotifier());
+    (ref) => AuthStateNotifier());
