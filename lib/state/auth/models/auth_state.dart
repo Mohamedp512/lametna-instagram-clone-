@@ -31,7 +31,6 @@ class AuthState {
           userId == other.userId);
 
   @override
-  // TODO: implement hashCode
   int get hashCode => Object.hash(
         result,
         isLoading,

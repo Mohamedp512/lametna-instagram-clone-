@@ -4,7 +4,7 @@ import 'package:instantgram/state/constants/firebase_field_name.dart';
 import 'package:instantgram/state/posts/typedefs/user_id.dart';
 
 @immutable
-class UserInfoPayload extends MapView<String, String> {
+class UserInfoPayload extends MapView<String, dynamic> {
   UserInfoPayload({
     required UserId userId,
     required String? displayName,

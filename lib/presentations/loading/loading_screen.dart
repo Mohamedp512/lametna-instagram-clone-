@@ -1,6 +1,5 @@
 import 'dart:async';
 
-
 import 'package:flutter/material.dart';
 import 'package:instantgram/presentations/loading/loading_screen_contoller.dart';
 
@@ -20,7 +19,7 @@ class LoadingScreen {
     if (controller?.update(text) ?? false) {
       return;
     } else {
-      controller=showOverlay(
+      controller = showOverlay(
         context: context,
         text: text,
       );
@@ -29,7 +28,6 @@ class LoadingScreen {
 
   void hide() {
     controller?.close();
-    print('Workkkkk');
     controller = null;
   }
 

@@ -1,8 +1,8 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:instantgram/extensions/object/log.dart';
-import 'package:instantgram/presentations/home.dart';
 import 'package:instantgram/presentations/loading/loading_screen.dart';
 import 'package:instantgram/presentations/login_view.dart';
+import 'package:instantgram/presentations/main_view.dart';
 import 'package:instantgram/state/auth/providers/is_logged_in_provider.dart';
 import 'package:instantgram/state/providers/is_loading_provider.dart';
 import 'firebase_options.dart';
@@ -46,14 +46,13 @@ class App extends StatelessWidget {
           if (isLoading) {
             LoadingScreen.instance().show(context: context);
           } else {
-            print('Close');
             LoadingScreen.instance().hide();
           }
         });
         final isLoggedIn = ref.watch(isLoggedProvider);
         isLoggedIn.log();
         if (isLoggedIn) {
-          return const Home();
+          return const MainView();
         } else {
           return const LoginView();
         }

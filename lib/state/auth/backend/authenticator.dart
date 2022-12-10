@@ -29,7 +29,9 @@ class Authenticator {
     try {
       await FirebaseAuth.instance.signInWithCredential(
         oauthCredentials,
+        
       );
+      print('crrrrrr:${userId}');
       return AuthResult.success;
     } on FirebaseAuthException catch (e) {
       final email = e.email;
@@ -52,22 +54,28 @@ class Authenticator {
   }
 
   Future<AuthResult> loginWithGoogle() async {
-    final GoogleSignIn googleSignIn = GoogleSignIn(scopes: [
-      Constants.emailScope,
-    ]);
+    final GoogleSignIn googleSignIn = GoogleSignIn(
+      scopes: [
+        Constants.emailScope,
+      ],
+    );
     final signInAccount = await googleSignIn.signIn();
     if (signInAccount == null) {
       return AuthResult.aborted;
     }
+
     final googleAuth = await signInAccount.authentication;
     final oauthCredential = GoogleAuthProvider.credential(
       accessToken: googleAuth.accessToken,
       idToken: googleAuth.idToken,
     );
+    print('ttttttttttttttttt${googleAuth.accessToken}');
     try {
       FirebaseAuth.instance.signInWithCredential(
         oauthCredential,
       );
+      
+      print('crrrrrr:${userId}');
       return AuthResult.success;
     } catch (e) {
       return AuthResult.failure;
